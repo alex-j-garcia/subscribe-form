@@ -45,10 +45,16 @@ body {
 }
 
 .registration-form {
-  width: 50%;
+  width: 33.3%;
   margin: 0 auto;
   text-align: left;
   font-size: 1.5rem;
+}
+
+.mailingList {
+  display: flex;
+  background: white;
+  border-radius: 5px;
 }
 
 label {
@@ -57,15 +63,41 @@ label {
 }
 
 input[type="email"] {
+  font-weight: bold;
+  font-size: 1.3rem;
+  letter-spacing: .017rem;
   width: 100%;
   padding: 1.5rem .5rem;
-  border-radius: 3px;
   border: none;
-  margin-bottom: 1rem;
+  margin-left: .5rem;
+  margin-right: .5rem;
 }
 
 input[type="email"]::placeholder {
   color: var(--placeholder-text);
+  font-weight: normal;
+  font-size: 13px;
+}
+
+input[type="email"]:focus {
+  outline: none;
+}
+
+input[type="submit"] {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  background: hsla(208, 100%, 40%, 1.0);
+  border: none;
+  padding: 1.1rem .75rem;
+  border-radius: 5px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background: hsla(211, 100%, 37%, 1.0);
 }
 
 /**********************
