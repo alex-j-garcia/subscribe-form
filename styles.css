@@ -51,6 +51,8 @@ body {
 
 .registration-container {
   /* Display & Box Model */
+  max-width: min(100%, 67rem);
+  margin: 0 auto;
   padding: 2rem 0;
 
   /* Other */
@@ -59,7 +61,6 @@ body {
 
 .registration-form {
   /* Display & Box Model */
-  width: 33.3%;
   margin: 0 auto;
 
   /* Other */
@@ -70,6 +71,7 @@ body {
   /* Display & Box Model */
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 label {
@@ -143,6 +145,13 @@ input[type="submit"]:hover {
 ||  Media Queries
 **********************/
 @media only screen and (max-width: 767px) {
+  .registration-heading {
+    font-size: 2rem;
+  }
+  
+  .registration-container {
+    max-width: 100%;
+  }
   .registration-form {
     width: 100%;
     padding: 0 1rem;
