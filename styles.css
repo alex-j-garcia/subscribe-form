@@ -1,17 +1,24 @@
 html {
+  /* Display & Box Model */
   box-sizing: border-box;
 
+  /* Other */
   font-size: 62.5%;
 
   /* CSS Variables */
   --text: hsla(0, 0%, 11.5%, 1.0);
   --placeholder-text: hsla(0, 0%, 15%, 0.7);
+  --input-text: hsla(0, 0%, 24%, 1.0);
   --mustard: hsla(50, 100%, 50%, 1.0);
+  --white: hsla(0, 0%, 94%, 1.0);
+  --btn-background: hsla(208, 100%, 40%, 1.0);
+  --btn-background-hover: hsla(211, 100%, 37%, 1.0);
 }
 
 *,
 *::before,
 *::after {
+  /* Display & Box Model */
   margin: 0;
   padding: 0;
   box-sizing: inherit;
@@ -26,8 +33,11 @@ body {
 }
 
 .registration {
+  /* Display & Box Model */
   width: 100%;
   padding: 2rem 0;
+
+  /* Other */
   font-family: Arial, Helvetica, sans-serif;
   color: var(--text);
   background: var(--mustard);
@@ -40,69 +50,114 @@ body {
 }
 
 .registration-container {
+  /* Display & Box Model */
   padding: 2rem 0;
+
+  /* Other */
   text-align: center;
 }
 
 .registration-form {
+  /* Display & Box Model */
   width: 33.3%;
   margin: 0 auto;
-  text-align: left;
+
+  /* Other */
   font-size: 1.5rem;
 }
 
-.mailingList {
+.registration-row {
+  /* Display & Box Model */
   display: flex;
-  background: white;
-  border-radius: 5px;
+  flex-wrap: wrap;
 }
 
 label {
-  display: block;
+  /* Display & Box Model */
+  width: 100%;
   margin-bottom: .5rem;
+
+  /* Other */
+  text-align: left;
 }
 
 input[type="email"] {
-  font-weight: bold;
-  font-size: 1.3rem;
-  letter-spacing: .017rem;
-  width: 100%;
-  padding: 1.5rem .5rem;
+  /* Display & Box Model */
+  flex: 2;
+  padding: 1.5rem 1rem;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
   border: none;
-  margin-left: .5rem;
-  margin-right: .5rem;
+
+  /* Other */
+  font-weight: bold;
+  font-size: 1.5rem;
+  letter-spacing: .017rem;
+  color: var(--input-text);
 }
 
 input[type="email"]::placeholder {
-  color: var(--placeholder-text);
+  /* Other */
   font-weight: normal;
   font-size: 13px;
+  color: var(--placeholder-text);
 }
 
 input[type="email"]:focus {
+  /* Other */
   outline: none;
 }
 
 input[type="submit"] {
-  font-size: 2rem;
-  font-weight: 700;
-  color: white;
-  background: hsla(208, 100%, 40%, 1.0);
+  /* Display & Box Model */
   border: none;
-  padding: 1.1rem .75rem;
+  padding: 1rem 1rem;
   border-radius: 5px;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+
+  /* Other */
+  text-shadow: 0 0 1px black;
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: Tahoma, Helvetica, sans-serif;
+  color: var(--white);
+  background: var(--btn-background);
   cursor: pointer;
 }
 
 input[type="submit"]:hover {
-  background: hsla(211, 100%, 37%, 1.0);
+  /* Other */
+  background: var(--btn-background-hover);
 }
 
 /**********************
 ||  Utilities
 **********************/
 .troubleshooting {
+  /* Other */
   outline: 1px solid red;
+}
+
+/**********************
+||  Media Queries
+**********************/
+@media only screen and (max-width: 767px) {
+  .registration-form {
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .registration-row {
+    flex-direction: column;
+  }
+
+  input[type="email"] {
+    margin-bottom: 1rem;
+    border-radius: 5px;
+  }
+
+  input[type="submit"] {
+    border-radius: 5px;
+  }
 }
