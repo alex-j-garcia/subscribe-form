@@ -146,27 +146,33 @@ input[type="submit"]:hover {
 **********************/
 @media only screen and (max-width: 767px) {
   .registration-heading {
+    /* Other */
     font-size: 2rem;
   }
-  
+
   .registration-container {
+    /* Display & Box Model */
     max-width: 100%;
   }
   .registration-form {
+    /* Display & Box Model */
     width: 100%;
     padding: 0 1rem;
   }
 
   .registration-row {
+    /* Display & Box Model */
     flex-direction: column;
   }
 
   input[type="email"] {
+    /* Display & Box Model */
     margin-bottom: 1rem;
     border-radius: 5px;
   }
 
   input[type="submit"] {
+    /* Display & Box Model */
     border-radius: 5px;
   }
 }
