@@ -21,7 +21,9 @@ Inspecting the page that inspired this component, I realized that the `min()` fu
 ...
 
 @media only screen and (max-width: 759px) {
-  max-width: 100%;
+  .registration-container {
+    max-width: 100%;
+  }
 }
 ```
 
